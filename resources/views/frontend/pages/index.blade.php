@@ -15,10 +15,10 @@
       <div class="carousel-item active">
         <img src="{{ asset('images/sliders/slider1.png') }}" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
-          <h3>Welcome to your Book Sharing Platform</h3>
+          <h3>Kitob almashish platformangizga xush kelibsiz</h3>
           <p>
-            <a href="register.html" class="btn btn-primary slider-link">
-              Get Start Now
+            <a href="{{route('register')}}" class="btn btn-primary slider-link">
+              Hozir boshlang
             </a>
           </p>
         </div>
@@ -26,10 +26,10 @@
       <div class="carousel-item">
         <img src="{{ asset('images/sliders/slider2.png') }}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h3>Welcome to your Book Sharing Platform</h3>
+          <h3>Kitob almashish platformangizga xush kelibsiz</h3>
           <p>
             <a href="" class="btn btn-primary slider-link">
-              New Account
+              Yangi hisob
             </a>
           </p>
         </div>
@@ -37,10 +37,10 @@
       <div class="carousel-item">
         <img src="{{ asset('images/sliders/slider3.jpg') }}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h3>Welcome to your Book Sharing Platform</h3>
+          <h3>Kitob almashish platformangizga xush kelibsiz</h3>
           <p>
             <a href="" class="btn btn-primary slider-link">
-              Borrow Now
+              Hozir qarz oling
             </a>
           </p>
         </div>
@@ -48,11 +48,11 @@
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">Oldingi</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">Keyingi</span>
     </a>
   </div>
   <!-- Carousel -->
@@ -77,43 +77,34 @@
 
         <div class="col-md-3">
           <div class="card card-body single-top-link" onclick="location.href='{{ route('login') }}'">
-            <h4>Sign In</h4>
+            <h4>Tizimga kirish</h4>
             <i class="fa fa-sign-in-alt"></i>
             <p>
-              Sign In To Start Sharing Your Books
+              Kitoblaringizni almashishni boshlash uchun tizimga kiring
             </p>
           </div> <!-- Single Item -->
         </div> <!-- Single Col -->
 
         <div class="col-md-3">
           <div class="card card-body single-top-link"  onclick="location.href='{{ route('register') }}'">
-            <h4>Create New</h4>
+            <h4>Yangi yaratish</h4>
             <i class="fa fa-user"></i>
             <p>
-              Create New Account
+              Yangi hisob yaratish
             </p>
           </div> <!-- Single Item -->
         </div> <!-- Single Col -->
 
         <div class="col-md-3">
           <div class="card card-body single-top-link">
-            <h4>Borrow Book</h4>
+            <h4>Kitob qarz</h4>
             <i class="fa fa-cart-plus"></i>
             <p>
-              Borrow your needed books
+              Kerakli kitoblaringizni qarzga oling
             </p>
           </div> <!-- Single Item -->
         </div> <!-- Single Col -->
 
-        <div class="col-md-3">
-          <div class="card card-body single-top-link">
-            <h4>Top Searched</h4>
-            <i class="fa fa-search"></i>
-            <p>
-              Top Searched Book Lists
-            </p>
-          </div> <!-- Single Item -->
-        </div> <!-- Single Col -->
 
       </div>
     </div>
@@ -121,7 +112,7 @@
 
   <div class="advance-search">
     <div class="container">
-      <h3>Advance Search</h3>
+      <h3>Kengaytirilgan qidiruv</h3>
       <form action="{{ route('books.search.advance') }}" method="post">
         @csrf
         <div class="row">
@@ -176,7 +167,7 @@
       <div class="row">
 
         <div class="col-md-9">
-          <h3>Recent Uploaded Books</h3>
+          <h3>Oxirgi yuklangan kitoblar</h3>
 
           @include('frontend.pages.books.partials.list')
 
@@ -189,7 +180,7 @@
         <div class="col-md-3">
           <div class="widget">
             <h5 class="mb-2 border-bottom pb-3">
-              Categories
+              Kategoriyalar
             </h5>
 
             @include('frontend.pages.books.partials.category-sidebar')
