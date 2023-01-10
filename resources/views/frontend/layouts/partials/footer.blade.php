@@ -8,11 +8,11 @@
         <img src="{{ asset('images/logo.jpg') }}" class="logo-image">
         <p>
           <address>
-            Farmgate, Dhaka-1200
+       O'zbekiston Resbpublikasi Xorazm Vilyati 108 uy
             <br>
-            Dhaka
+
           </address>
-          <a href="mailto:support@booksharing.com">support@booksharing.com</a>
+          <a href="mailto:support@booksharing.com">bookshelf@gmail.com</a>
 {{--        </p>--}}
 
       </div>
