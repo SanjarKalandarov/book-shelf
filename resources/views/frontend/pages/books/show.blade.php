@@ -24,7 +24,7 @@
           </p>
           <hr>
 
-          <p><strong>Yuklangan: </strong> {{ $book->user->name }}</p>
+          <p><strong>Yuklangan: </strong> {{ $book->user }}</p>
           <p><strong>Yuklangan: </strong> {{ $book->created_at->diffForHumans() }}</p>
           <p>
             <strong>Nashr qilingan: </strong> {{ $book->publish_year }},
@@ -44,7 +44,7 @@
               @auth
 
               @if ($book->quantity > 0)
-                @if (!is_null(App\User::bookRequest($book->id)))
+                @if (!is_null(App\Models\User::bookRequest($book->id)))
                   
                   @if (App\User::bookRequest($book->id)->status == 1)
                   <span class="badge badge-success" style="padding: 12px;border-radius: 0px;font-size: 14px;">

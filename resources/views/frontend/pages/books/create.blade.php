@@ -47,11 +47,11 @@
                   </select>
                 </div> 
 
-                <div class="col-md-6">
-                  <label for="isbn">Kitob ISBN</label>
-                  <br>
-                   <input type="text" class="form-control" name="isbn" placeholder="Kitob ISBN">
-                </div> 
+{{--                <div class="col-md-6">--}}
+{{--                  <label for="isbn">Kitob ISBN</label>--}}
+{{--                  <br>--}}
+{{--                   <input type="text" class="form-control" name="isbn" placeholder="Kitob ISBN">--}}
+{{--                </div> --}}
 
                 <div class="col-md-6">
                   <label for="">Kitob muallifi</label>
@@ -93,17 +93,7 @@
                     <br>
                     <input type="file" name="image" id="image" class="form-control" required>   
                 </div>
-                <div class="col-md-6">
-                  <label for="translator_id">Kitob tarjimon</label>
-                  <br>
-                   <select name="translator_id" id="translator_id" class="form-control select2">
-                    <option value="">Tarjimon kitobini tanlang</option>
-                    @foreach ($books as $book)
-                      <option value="{{ $book->id }}">{{ $book->title }}</option>
-                    @endforeach
-                  </select>
-                </div> 
-                
+
                 <div class="col-md-6">
                   <label for="quantity">Kitob miqdori</label>
                     <br>

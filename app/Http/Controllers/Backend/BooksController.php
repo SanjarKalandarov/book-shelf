@@ -25,6 +25,7 @@ class BooksController extends Controller
     public function index()
     {
         $books = Book::orderBy('id', 'desc')->get();
+
         return view('backend.pages.books.index', compact('books'));
     }
 
@@ -94,7 +95,7 @@ class BooksController extends Controller
         $book->user_id = 1;
         $book->is_approved = 1;
         $book->isbn = $request->isbn;
-        $book->translator_id = $request->translator_id;
+        $book->translator_id =1;
         $book->quantity = $request->quantity;
         $book->save();
 
@@ -102,8 +103,8 @@ class BooksController extends Controller
         if ($request->image) {
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
-            $name = time().'-'.$book->id.'.'.$ext;
-            $path = "images/books";
+            $name = time().$book->id.'.'.$ext;
+            $path = "images/books/";
             $file->move($path, $name);
             $book->image = $name;
             $book->save();
@@ -206,8 +207,8 @@ class BooksController extends Controller
             
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
-            $name = time().'-'.$book->id.'.'.$ext;
-            $path = "images/books";
+            $name = time().$book->id.'.'.$ext;
+            $path = "images/books/";
             $file->move($path, $name);
             $book->image = $name;
             $book->save();

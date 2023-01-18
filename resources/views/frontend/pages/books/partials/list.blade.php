@@ -6,7 +6,7 @@
         <div class="book-short-info">
           <h5>{{ $book->title }}</h5>
           <p>
-            <a href="{{ route('users.profile', $book->user->username) }}" class=""><i class="fa fa-upload"></i> {{ $book->user->name }}</a>
+{{--            <a href="{{ route('users.profile', $book->user->username) }}" class=""><i class="fa fa-upload"></i> {{ $book->user->name }}</a>--}}
           </p>
 
           

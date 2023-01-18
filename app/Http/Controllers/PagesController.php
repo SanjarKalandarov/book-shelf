@@ -14,6 +14,8 @@ class PagesController extends Controller
     	$categories = Category::all();
     	$publishers = Publisher::all();
     	$books = Book::where('is_approved', 1)->orderBy('id', 'desc')->paginate(10);
+
+//         dd($books);
         return view('frontend.pages.index', compact('books', 'publishers', 'categories'));
     }
 }

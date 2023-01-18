@@ -9,14 +9,15 @@ use App\Author;
 use App\Publisher;
 use App\Book;
 use App\BookAuthor;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+
 
 class BooksController extends Controller
 {
     public function show($slug)
     {
     	$book = Book::where('slug', $slug)->first();
-    	
+//    	dd($book);
     	if (!is_null($book)) {
     		return view('frontend.pages.books.show', compact('book'));
     	}
@@ -36,6 +37,7 @@ class BooksController extends Controller
     public function index()
     {
         $books = Book::orderBy('id', 'desc')->where('is_approved', 1)->paginate(10);
+//        dd($books);
         return view('frontend.pages.books.index', compact('books'));
 
     }
@@ -127,17 +129,17 @@ class BooksController extends Controller
         $book->description = $request->description;
         $book->user_id = Auth::id();
         $book->is_approved = 0;
-        $book->isbn = $request->isbn;
+        $book->isbn = 45;
         $book->quantity = $request->quantity;
-        $book->translator_id = $request->translator_id;
+        $book->translator_id=1;
         $book->save();
 
         // Image Upload
         if ($request->image) {
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
-            $name = time().'-'.$book->id.'.'.$ext;
-            $path = "images/books";
+            $name = time().$book->id.'.'.$ext;
+            $path = "images/books/";
             $file->move($path, $name);
             $book->image = $name;
             $book->save();

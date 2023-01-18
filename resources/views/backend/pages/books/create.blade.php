@@ -36,11 +36,11 @@
                   </select>
                 </div> 
 
-                <div class="col-md-6">
-                  <label for="isbn">Book ISBN</label>
-                  <br>
-                   <input type="text" class="form-control" name="isbn" placeholder="Book ISBN">
-                </div> 
+{{--                <div class="col-md-6">--}}
+{{--                  <label for="isbn">Book ISBN</label>--}}
+{{--                  <br>--}}
+{{--                   <input type="text" class="form-control" name="isbn" placeholder="Book ISBN">--}}
+{{--                </div> --}}
 
                 <div class="col-md-6">
                   <label for="">Book Author</label>
@@ -82,16 +82,16 @@
                     <br>
                     <input type="file" name="image" id="image" class="form-control" required>   
                 </div>
-                <div class="col-md-6">
-                  <label for="translator_id">Book Translator</label>
-                  <br>
-                   <select name="translator_id" id="translator_id" class="form-control select2">
-                    <option value="">Select a translator book</option>
-                    @foreach ($books as $book)
-                      <option value="{{ $book->id }}">{{ $book->title }}</option>
-                    @endforeach
-                  </select>
-                </div> 
+{{--                <div class="col-md-6">--}}
+{{--                  <label for="translator_id">Book Translator</label>--}}
+{{--                  <br>--}}
+{{--                   <select name="translator_id" id="translator_id" class="form-control select2">--}}
+{{--                    <option value="">Select a translator book</option>--}}
+{{--                    @foreach ($books as $book)--}}
+{{--                      <option value="{{ $book->id }}">{{ $book->title }}</option>--}}
+{{--                    @endforeach--}}
+{{--                  </select>--}}
+{{--                </div> --}}
 
                 <div class="col-md-6">
                   <label for="quantity">Book Quantity</label>
