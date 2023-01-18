@@ -25,6 +25,6 @@ class DatabaseSeeder extends Seeder
 //        Category::create(['name'=>'Badiiy kitoblar']);
 //        Category::create(['name'=>'Badiiy kitoblar']);
 //        Category::create(['name'=>'Badiiy kitoblar']);
-        $this->call([CategorySeeder::class]);
+        $this->call([CategorySeeder::class,UserSeeder::class]);
     }
 }
