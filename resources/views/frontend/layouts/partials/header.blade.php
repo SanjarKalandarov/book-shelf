@@ -54,12 +54,12 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('books.index') }}">So'nggi kitoblar</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter Books By</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Eng ko'p qarzga olinganlar bo'yicha filtrlash</a>
-            </div>
-          </li>
+{{--          <li class="nav-item dropdown">--}}
+{{--            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter Books By</a>--}}
+{{--            <div class="dropdown-menu" aria-labelledby="dropdown01">--}}
+{{--              <a class="dropdown-item" href="#">Eng ko'p qarzga olinganlar bo'yicha filtrlash</a>--}}
+{{--            </div>--}}
+{{--          </li>--}}
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kitoblarni yuklash</a>
