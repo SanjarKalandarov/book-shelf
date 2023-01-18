@@ -80,7 +80,7 @@ $books->translator_id=$request->translator_id;
         if ($request->file('image')) {
             $file = $request->file('image');
             $filename = time() . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('assets/images/books/'), $filename);
+            $file->move('images/books/', $filename);
             $books['image'] = $filename;
         }
 //        dd($books);
@@ -168,7 +168,7 @@ return redirect(route('admin.book.index'));
 
             $file = $request->file('image');
             $filename = time() . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('assets/images/books/'), $filename);
+            $file->move(public_path('images/books/'), $filename);
             $books['image'] = $filename;
 
         }

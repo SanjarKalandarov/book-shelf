@@ -2,7 +2,7 @@
   @foreach ($books as $book)
     <div class="col-md-4">
       <div class="single-book">
-        <img src="{{ asset('assets/images/books/'.$book->image) }}" alt="">
+        <img src="{{ asset('images/books/'.$book->image) }}" alt="">
         <div class="book-short-info">
           <h5>{{ $book->title }}</h5>
           <p>
